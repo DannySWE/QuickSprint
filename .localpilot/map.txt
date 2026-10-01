@@ -1,0 +1,220 @@
+## WORKSPACE EXECUTIVE SUMMARY (YAML)
+# Generated: 2026-09-30T15:59:23.5403312-04:00
+# Root: C:\Users\danny\source\repos\SprintPlannerDashboard
+Architecture:
+  Type: Backend (C#/.NET)
+  Scale: 87 relevant source files
+  Components: 0
+  Controllers: 0
+  Models: 0
+  Services: 0
+---
+- File: SprintPlannerDashboard.Application\SprintPlannerDashboard.Application.csproj
+  Preview: "<Project Sdk='Microsoft.NET.Sdk'>  <PropertyGroup>   <TargetFramework>net10.0</TargetFramework>   <ImplicitUsings>enable</ImplicitUsings>   <Nullable>..."
+- File: SprintPlannerDashboard.Domain\SprintPlannerDashboard.Domain.csproj
+  Preview: "<Project Sdk='Microsoft.NET.Sdk'>  <PropertyGroup>   <TargetFramework>net10.0</TargetFramework>   <ImplicitUsings>enable</ImplicitUsings>   <Nullable>..."
+- File: SprintPlannerDashboard.Server\SprintPlannerDashboard.Server.csproj
+  Preview: "<Project Sdk='Microsoft.NET.Sdk.Web'>  <PropertyGroup>   <TargetFramework>net10.0</TargetFramework>   <Nullable>enable</Nullable>   <ImplicitUsings>en..."
+- File: SprintPlannerDashboard.slnx
+  Preview: "<Solution>  <Project Path='SprintPlannerDashboard.Application/SprintPlannerDashboard.Application.csproj' />  <Project Path='sprintplannerdashboard.cli..."
+- File: sprintplannerdashboard.client\angular.json
+  Preview: "{  '$schema': './node_modules/@angular/cli/lib/config/schema.json',  'version': 1,  'cli': {   'packageManager': 'npm'  },  'newProjectRoot': 'project..."
+- File: sprintplannerdashboard.client\aspnetcore-https.js
+  Preview: "// This script sets up HTTPS for the application using the ASP.NET Core HTTPS certificate const fs = require('fs'); const spawn = require('child_proce..."
+- File: sprintplannerdashboard.client\CHANGELOG.md
+  Preview: "This file explains how Visual Studio created the project. The following tools were used to generate this project: - Angular CLI (ng) The following ste..."
+- File: sprintplannerdashboard.client\karma.conf.js
+  Symbols: [function]
+  Preview: "module.exports = function (config) {  config.set({   basePath: '',   frameworks: ['jasmine', '@angular-devkit/build-angular'],   plugins: [    require..."
+- File: sprintplannerdashboard.client\package-lock.json
+  Preview: "{  'name': 'sprintplannerdashboard.client',  'version': '0.0.0',  'lockfileVersion': 3,  'requires': true,  'packages': {   '': {    'name': 'sprintpl..."
+- File: sprintplannerdashboard.client\package.json
+  Preview: "{  'name': 'sprintplannerdashboard.client',  'version': '0.0.0',  'scripts': {   'ng': 'ng',   'start': 'run-script-os',   'build': 'ng build',   'wat..."
+- File: sprintplannerdashboard.client\README.md
+  Preview: "# SprintplannerdashboardClient This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.0. ## Development s..."
+- File: sprintplannerdashboard.client\tsconfig.app.json
+  Preview: "/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */ /* To learn more about Angul..."
+- File: sprintplannerdashboard.client\tsconfig.json
+  Preview: "/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */ /* To learn more about Angul..."
+- File: sprintplannerdashboard.client\tsconfig.spec.json
+  Preview: "/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */ /* To learn more about Angul..."
+- File: SprintPlannerDashboard.Server\appsettings.Development.json
+  Preview: "{  'Logging': {   'LogLevel': {    'Default': 'Information',    'Microsoft.AspNetCore': 'Warning'   }  } } "
+- File: SprintPlannerDashboard.Server\appsettings.json
+  Preview: "{  'Logging': {   'LogLevel': {    'Default': 'Information',    'Microsoft.AspNetCore': 'Warning'   }  },  'AllowedHosts': '*',  'ConnectionStrings': ..."
+- File: SprintPlannerDashboard.Server\CHANGELOG.md
+  Preview: "This file explains how Visual Studio created the project. The following steps were used to generate this project: - Create new ASP\.NET Core Web API p..."
+- File: SprintPlannerDashboard.Server\Program.cs
+  Preview: "using Microsoft.AspNetCore.Authentication.JwtBearer; using Microsoft.AspNetCore.Identity; using Microsoft.EntityFrameworkCore; using Microsoft.Identit..."
+- File: SprintPlannerDashboard.Application\DTOs\BaseDto.cs
+  Preview: "using System; using System.Collections.Generic; using System.Text; namespace SprintPlannerDashboard.Application.DTOs {   public record BaseDto   {   }..."
+- File: SprintPlannerDashboard.Application\Mappers\BacklogItemMapper.cs
+  Preview: "using PrintPlannerDashboard.Domain.Entites; using SprintPlannerDashboard.Application.DTOs; using SprintPlannerDashboard.Application.DTOs.BacklogItemDt..."
+- File: SprintPlannerDashboard.Application\Mappers\ProjectBoardMapper.cs
+  Symbols: [ToEntityFromUpdateDto, ProjectBoardMapper, ToEntity, ToEntity, ToDto, ToEntityFromCreateDto]
+  Preview: "using PrintPlannerDashboard.Domain.Entites; using System.Collections.Generic; using System.Linq; using System; using SprintPlannerDashboard.Applicatio..."
+- File: SprintPlannerDashboard.Application\Mappers\ProjectMapper.cs
+  Symbols: [ToEntityFromUpdateDto, ToEntity, ToEntity, Project, Project, Project, ToDto, ToEntityFromCreateDto, ProjectMapper]
+  Preview: "using PrintPlannerDashboard.Domain.Entites; using SprintPlannerDashboard.Application.DTOs; using SprintPlannerDashboard.Application.DTOs.ProjectBoardD..."
+- File: SprintPlannerDashboard.Application\Mappers\ProjectTaskMapper.cs
+  Preview: "using PrintPlannerDashboard.Domain.Entites; using SprintPlannerDashboard.Application.DTOs; using SprintPlannerDashboard.Application.DTOs.ProjectTaskDt..."
+- File: SprintPlannerDashboard.Application\Mappers\SprintMapper.cs
+  Symbols: [ToEntityFromUpdateDto, ToDtoList, ToEntity, ToEntity, ToDto, ToEntityFromCreateDto, SprintMapper]
+  Preview: "using PrintPlannerDashboard.Domain.Entites; using SprintPlannerDashboard.Application.DTOs; using SprintPlannerDashboard.Application.DTOs.BacklogItemDt..."
+- File: sprintplannerdashboard.client\.vscode\extensions.json
+  Preview: "{  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=827846  'recommendations': ['angular.ng-template'] } "
+- File: sprintplannerdashboard.client\.vscode\launch.json
+  Preview: "{  'version': '0.2.0',  'configurations': [   {    'type': 'edge',    'request': 'launch',    'name': 'localhost (Edge)',    'url': 'https://localhost..."
+- File: sprintplannerdashboard.client\.vscode\mcp.json
+  Preview: "{  // For more information, visit: https://angular.dev/ai/mcp  'servers': {   'angular-cli': {    'command': 'npx',    'args': ['-y', '@angular/cli', ..."
+- File: sprintplannerdashboard.client\.vscode\tasks.json
+  Preview: "{  // For more information, visit: https://go.microsoft.com/fwlink/?LinkId=733558  'version': '2.0.0',  'tasks': [   {    'type': 'npm',    'script': ..."
+- File: sprintplannerdashboard.client\src\main.ts
+  Preview: "import { platformBrowser } from '@angular/platform-browser'; import { AppModule } from './app/app-module'; platformBrowser().bootstrapModule(AppModule..."
+- File: sprintplannerdashboard.client\src\proxy.conf.js
+  Preview: "const { env } = require('process'); const target = env.ASPNETCORE_HTTPS_PORT ? `https://localhost:${env.ASPNETCORE_HTTPS_PORT}` :  env.ASPNETCORE_URLS..."
+- File: SprintPlannerDashboard.Domain\Entites\BacklogItem.cs
+  Symbols: [BacklogItem]
+  Preview: "using System; using System.Collections.Generic; using System.ComponentModel.DataAnnotations; using System.Text; namespace PrintPlannerDashboard.Domain..."
+- File: SprintPlannerDashboard.Domain\Entites\Project.cs
+  Symbols: [Project]
+  Preview: "using System; using System.Collections.Generic; using System.ComponentModel.DataAnnotations; using System.Text; namespace PrintPlannerDashboard.Domain..."
+- File: SprintPlannerDashboard.Domain\Entites\ProjectBoard.cs
+  Symbols: [ProjectBoard]
+  Preview: "using System; using System.Collections.Generic; using System.ComponentModel.DataAnnotations; using System.Text; namespace PrintPlannerDashboard.Domain..."
+- File: SprintPlannerDashboard.Domain\Entites\ProjectTask.cs
+  Symbols: [ProjectTask]
+  Preview: "using System; using System.Collections.Generic; using System.ComponentModel.DataAnnotations; using System.ComponentModel.DataAnnotations.Schema; using..."
+- File: SprintPlannerDashboard.Domain\Entites\Sprint.cs
+  Symbols: [Sprint]
+  Preview: "using SprintPlannerDashboard.Application.Enums; using System; using System.Collections.Generic; using System.ComponentModel.DataAnnotations; using Sys..."
+- File: SprintPlannerDashboard.Domain\Entites\SprintPlannerUser.cs
+  Symbols: [SprintPlannerUser]
+  Preview: "using Microsoft.AspNetCore.Identity; using System; using System.Collections.Generic; using System.Text; namespace SprintPlannerDashboard.Domain.Entite..."
+- File: SprintPlannerDashboard.Domain\Enums\SprintStatus.cs
+  Preview: "using System; using System.Collections.Generic; using System.Text; namespace SprintPlannerDashboard.Application.Enums {   public enum SprintStatus   {..."
+- File: SprintPlannerDashboard.Domain\Interfaces\IGenericRepository.cs
+  Symbols: [IGenericRepository]
+  Preview: "using PrintPlannerDashboard.Domain.Entites; using System; using System.Collections.Generic; using System.Text; namespace SprintPlannerDashboard.Domain..."
+- File: SprintPlannerDashboard.Server\Config\RoutingConfig.cs
+  Symbols: [RoutingConfig]
+  Preview: "namespace SprintPlannerDashboard.Server.Config {   public static class RoutingConfig   {     //routing variables for project endpoints     public cons..."
+- File: SprintPlannerDashboard.Server\Data\SprintPlannerDbContext.cs
+  Symbols: [SprintPlannerDbContext]
+  Preview: "using Microsoft.EntityFrameworkCore; using PrintPlannerDashboard.Domain.Entites; namespace SprintPlannerDashboard.Server.Data {   public class SprintP..."
+- File: SprintPlannerDashboard.Server\Data\SprintPlannerUserDbContext.cs
+  Symbols: [SprintPlannerUserDbContext]
+  Preview: "using Microsoft.AspNetCore.Identity.EntityFrameworkCore; using Microsoft.EntityFrameworkCore; using SprintPlannerDashboard.Domain.Entites; namespace S..."
+- File: SprintPlannerDashboard.Server\Endpoints\BacklogItemEndpoints.cs
+  Symbols: [BacklogItemEndpoints, Back, MapBacklogItemEndpoints]
+  Preview: "using Microsoft.AspNetCore.Builder; using Microsoft.AspNetCore.Routing; using SprintPlannerDashboard.Server.Config; using SprintPlannerDashboard.Serve..."
+- File: SprintPlannerDashboard.Server\Endpoints\ProjectBoardEndpoints.cs
+  Symbols: [ProjectBoardEndpoints, MapProjectBoardEndpoints]
+  Preview: "using SprintPlannerDashboard.Server.Config; using SprintPlannerDashboard.Server.Handlers; namespace SprintPlannerDashboard.Server.Endpoints {   public..."
+- File: SprintPlannerDashboard.Server\Endpoints\ProjectEndpoints.cs
+  Symbols: [ProjectEndpoints, MapSprintProjectEndpoints]
+  Preview: "using Microsoft.IdentityModel.Tokens; using SprintPlannerDashboard.Server.Config; using SprintPlannerDashboard.Server.Handlers; namespace SprintPlanne..."
+- File: SprintPlannerDashboard.Server\Endpoints\ProjectTaskEndpoints.cs
+  Symbols: [MapProjectTaskEndpoints, ProjectTaskEndpoints]
+  Preview: "using SprintPlannerDashboard.Server.Config; using SprintPlannerDashboard.Server.Handlers; namespace SprintPlannerDashboard.Server.Endpoints {   public..."
+- File: SprintPlannerDashboard.Server\Endpoints\SprintEndpoints.cs
+  Symbols: [SprintEndPoints, MapSprintEndpoints]
+  Preview: "using SprintPlannerDashboard.Server.Config; using SprintPlannerDashboard.Server.Handlers; namespace SprintPlannerDashboard.Server.Endpoints {   public..."
+- File: SprintPlannerDashboard.Server\Endpoints\UserEndpoints.cs
+  Symbols: [UserEndpoints]
+  Preview: "using Microsoft.AspNetCore.Authorization; using SprintPlannerDashboard.Server.Config; using SprintPlannerDashboard.Server.Handlers; namespace SprintPl..."
+- File: SprintPlannerDashboard.Server\Handlers\BacklogItemHandler.cs
+  Symbols: [UpdateBacklogItemAsync, CreateBacklogItemAsync, DeleteBacklogItemAsync, GetBacklogItemsForSprintAsync, GetBacklogItemAsync, BacklogItemHandler, GetAllBacklogItemsAsync, catch, catch, catch, catch, catch]
+  Preview: "using Microsoft.AspNetCore.Mvc; using SprintPlannerDashboard.Application.DTOs.BacklogItemDtos; using SprintPlannerDashboard.Server.Repositories; using..."
+- File: SprintPlannerDashboard.Server\Handlers\ProjectBoardHandler.cs
+  Symbols: [CreateProjectBoardAsync, GetAllProjectBoardsAsync, GetAllProjectBoardsFromProjectAsync, ProjectBoardHandler, UpdateProjectBoardAsync, GetProjectBoardAsync, ProjectBoard, catch, catch, catch, catch, catch]
+  Preview: "using Microsoft.AspNetCore.Mvc; using PrintPlannerDashboard.Domain.Entites; using SprintPlannerDashboard.Application.DTOs.ProjectBoardDtos; using Spri..."
+- File: SprintPlannerDashboard.Server\Handlers\ProjectTaskHandler.cs
+  Symbols: [GetProjectTaskAsync, ProjectTaskHandler, GetProjectTasksForBacklogItemIdAsync, UpdateProjectTaskAsync, DeleteProjectTaskAsync, GetAllProjectTasksAsync, catch, catch, catch, catch, catch]
+  Preview: "using Microsoft.AspNetCore.Mvc; using SprintPlannerDashboard.Application.DTOs.ProjectTaskDtos; using SprintPlannerDashboard.Server.Repositories; using..."
+- File: SprintPlannerDashboard.Server\Handlers\SprintHandler.cs
+  Symbols: [CreateSprintAsync, SprintHandler, GetSprintAsync, DeleteAsync, GetAllSprintsAsync, GetBacklogItemsFromSprintAsync, catch, catch, catch, catch, catch, UpdateAsync]
+  Preview: "using Microsoft.AspNetCore.Mvc; using Microsoft.EntityFrameworkCore.Migrations.Operations; using Microsoft.Extensions.Diagnostics.HealthChecks; using ..."
+- File: SprintPlannerDashboard.Server\Handlers\SprintPlannerUserHandler.cs
+  Preview: "using Microsoft.AspNetCore.Authorization; using Microsoft.AspNetCore.Identity; using Microsoft.AspNetCore.Mvc; using Microsoft.IdentityModel.Tokens; u..."
+- File: SprintPlannerDashboard.Server\Handlers\SprintProjectHandler.cs
+  Symbols: [GetAllProjectAsync, DeleteSprintProject, UpdateSprintProjectAsync, CreateSprintProjectAsync, SprintProjectHandler, GetSprintProjectAsync, catch, catch, catch, catch]
+  Preview: "using Microsoft.AspNetCore.Mvc; using Microsoft.EntityFrameworkCore.Migrations.Operations; using Microsoft.Extensions.Diagnostics.HealthChecks; using ..."
+- File: SprintPlannerDashboard.Server\Migrations\20260929155844_initV2.cs
+  Symbols: [initV2]
+  Preview: "using System; using Microsoft.EntityFrameworkCore.Migrations; #nullable disable namespace SprintPlannerDashboard.Server.Migrations {   /// <inheritdoc..."
+- File: SprintPlannerDashboard.Server\Migrations\20260929155844_initV2.Designer.cs
+  Preview: "// <auto-generated /> using System; using Microsoft.EntityFrameworkCore; using Microsoft.EntityFrameworkCore.Infrastructure; using Microsoft.EntityFra..."
+- File: SprintPlannerDashboard.Server\Migrations\20260929161449_initV3.cs
+  Symbols: [initV3]
+  Preview: "using Microsoft.EntityFrameworkCore.Migrations; #nullable disable namespace SprintPlannerDashboard.Server.Migrations {   /// <inheritdoc />   public p..."
+- File: SprintPlannerDashboard.Server\Migrations\20260929161449_initV3.Designer.cs
+  Preview: "// <auto-generated /> using System; using Microsoft.EntityFrameworkCore; using Microsoft.EntityFrameworkCore.Infrastructure; using Microsoft.EntityFra..."
+- File: SprintPlannerDashboard.Server\Migrations\SprintPlannerDbContextModelSnapshot.cs
+  Preview: "// <auto-generated /> using System; using Microsoft.EntityFrameworkCore; using Microsoft.EntityFrameworkCore.Infrastructure; using Microsoft.EntityFra..."
+- File: SprintPlannerDashboard.Server\Properties\launchSettings.json
+  Preview: "{  '$schema': 'https://json.schemastore.org/launchsettings.json',  'profiles': {   'http': {    'commandName': 'Project',    'dotnetRunMessages': true..."
+- File: SprintPlannerDashboard.Server\Repositories\BacklogItemRepository.cs
+  Symbols: [BacklogItemRepository]
+  Preview: "using Microsoft.EntityFrameworkCore; using PrintPlannerDashboard.Domain.Entites; using SprintPlannerDashboard.Server.Data; namespace SprintPlannerDash..."
+- File: SprintPlannerDashboard.Server\Repositories\GenericRepository.cs
+  Symbols: [GenericRepository]
+  Preview: "using Microsoft.EntityFrameworkCore; using SprintPlannerDashboard.Domain.Interfaces; using SprintPlannerDashboard.Server.Data; namespace SprintPlanner..."
+- File: SprintPlannerDashboard.Server\Repositories\ProjectTaskRepository.cs
+  Symbols: [ProjectTaskRepository]
+  Preview: "using Microsoft.EntityFrameworkCore; using PrintPlannerDashboard.Domain.Entites; using SprintPlannerDashboard.Server.Data; namespace SprintPlannerDash..."
+- File: SprintPlannerDashboard.Server\Repositories\SprintProjectBoardRepository.cs
+  Symbols: [SprintProjectBoardRepository]
+  Preview: "using Microsoft.EntityFrameworkCore; using PrintPlannerDashboard.Domain.Entites; using SprintPlannerDashboard.Server.Data; namespace SprintPlannerDash..."
+- File: SprintPlannerDashboard.Server\Repositories\SprintProjectRepository.cs
+  Preview: "using Microsoft.EntityFrameworkCore; using Microsoft.IdentityModel.Tokens; using PrintPlannerDashboard.Domain.Entites; using SprintPlannerDashboard.Do..."
+- File: SprintPlannerDashboard.Server\Repositories\SprintRepository.cs
+  Symbols: [SprintRepository]
+  Preview: "using Microsoft.EntityFrameworkCore; using PrintPlannerDashboard.Domain.Entites; using SprintPlannerDashboard.Server.Data; namespace SprintPlannerDash..."
+- File: SprintPlannerDashboard.Application\DTOs\BacklogItemDtos\BacklogItemDto.cs
+  Preview: "using SprintPlannerDashboard.Application.DTOs.ProjectTaskDtos; using System; using System.Collections.Generic; using System.ComponentModel.DataAnnotat..."
+- File: SprintPlannerDashboard.Application\DTOs\BacklogItemDtos\CreateBacklogItemDto.cs
+  Preview: "using System; using System.Collections.Generic; using System.Text; namespace SprintPlannerDashboard.Application.DTOs.BacklogItemDtos {   public record..."
+- File: SprintPlannerDashboard.Application\DTOs\BacklogItemDtos\UpdateBacklogItemDto.cs
+  Preview: "using SprintPlannerDashboard.Application.DTOs.ProjectTaskDtos; using System; using System.Collections.Generic; using System.ComponentModel.DataAnnotat..."
+- File: SprintPlannerDashboard.Application\DTOs\FormDtos\LoginFormDto.cs
+  Preview: "using Microsoft.AspNetCore.Identity; using System; using System.Collections.Generic; using System.ComponentModel; using System.ComponentModel.DataAnno..."
+- File: SprintPlannerDashboard.Application\DTOs\FormDtos\RegistrationFormDto.cs
+  Symbols: [RegistrationFormDto]
+  Preview: "using System; using System.Collections.Generic; using System.ComponentModel.DataAnnotations; using System.Text; namespace SprintPlannerDashboard.Appli..."
+- File: SprintPlannerDashboard.Application\DTOs\ProjectBoardDtos\CreateProjectBoardDto.cs
+  Preview: "using SprintPlannerDashboard.Application.DTOs.BacklogItemDtos; using SprintPlannerDashboard.Application.DTOs.SprintDtos; using System; using System.Co..."
+- File: SprintPlannerDashboard.Application\DTOs\ProjectBoardDtos\ProjectBoardDto.cs
+  Preview: "using SprintPlannerDashboard.Application.DTOs.BacklogItemDtos; using SprintPlannerDashboard.Application.DTOs.SprintDtos; using System; using System.Co..."
+- File: SprintPlannerDashboard.Application\DTOs\ProjectBoardDtos\UpdateProjectBoardDto.cs
+  Preview: "using SprintPlannerDashboard.Application.DTOs.BacklogItemDtos; using SprintPlannerDashboard.Application.DTOs.SprintDtos; using System; using System.Co..."
+- File: SprintPlannerDashboard.Application\DTOs\ProjectDtos\CreateProjectDto.cs
+  Preview: "using SprintPlannerDashboard.Application.DTOs.ProjectBoardDtos; using System; using System.Collections.Generic; using System.Text; namespace SprintPla..."
+- File: SprintPlannerDashboard.Application\DTOs\ProjectDtos\ProjectDto.cs
+  Preview: "using SprintPlannerDashboard.Application.DTOs.ProjectBoardDtos; using System; using System.Collections.Generic; using System.Text; namespace SprintPla..."
+- File: SprintPlannerDashboard.Application\DTOs\ProjectDtos\UpdateProjectDto.cs
+  Preview: "using SprintPlannerDashboard.Application.DTOs.ProjectBoardDtos; using System; using System.Collections.Generic; using System.Text; namespace SprintPla..."
+- File: SprintPlannerDashboard.Application\DTOs\ProjectTaskDtos\CreateProjectTaskDto.cs
+  Preview: "using System; using System.Collections.Generic; using System.Text; namespace SprintPlannerDashboard.Application.DTOs.ProjectTaskDtos {   public record..."
+- File: SprintPlannerDashboard.Application\DTOs\ProjectTaskDtos\ProjectTaskDto.cs
+  Preview: "using System; using System.Collections.Generic; using System.ComponentModel.DataAnnotations.Schema; using System.Text; namespace SprintPlannerDashboar..."
+- File: SprintPlannerDashboard.Application\DTOs\ProjectTaskDtos\UpdateProjectTaskDto.cs
+  Preview: "using System; using System.Collections.Generic; using System.Text; namespace SprintPlannerDashboard.Application.DTOs.ProjectTaskDtos {   public record..."
+- File: SprintPlannerDashboard.Application\DTOs\SprintDtos\CreateSprintDto.cs
+  Preview: "using SprintPlannerDashboard.Application.DTOs.BacklogItemDtos; using SprintPlannerDashboard.Application.Enums; using System; using System.Collections...."
+- File: SprintPlannerDashboard.Application\DTOs\SprintDtos\SprintDto.cs
+  Preview: "using SprintPlannerDashboard.Application.DTOs.BacklogItemDtos; using SprintPlannerDashboard.Application.Enums; using System; using System.Collections...."
+- File: SprintPlannerDashboard.Application\DTOs\SprintDtos\UpdateSprintDto.cs
+  Preview: "using SprintPlannerDashboard.Application.DTOs.BacklogItemDtos; using SprintPlannerDashboard.Application.Enums; using System; using System.Collections...."
+- File: SprintPlannerDashboard.Application\DTOs\SprintPlannerUserDtos\UserDto.cs
+  Preview: "using System; using System.Collections.Generic; using System.Text; namespace SprintPlannerDashboard.Application.DTOs.SprintPlannerUserDtos {   public ..."
+- File: sprintplannerdashboard.client\src\app\app-module.ts
+  Preview: "import { HttpClientModule } from '@angular/common/http'; import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core'; import { Browse..."
+- File: sprintplannerdashboard.client\src\app\app-routing-module.ts
+  Symbols: [AppRoutingModule]
+  Preview: "import { NgModule } from '@angular/core'; import { RouterModule, Routes } from '@angular/router'; const routes: Routes = []; @NgModule({  imports: [Ro..."
+- File: sprintplannerdashboard.client\src\app\app.spec.ts
+  Preview: "import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing'; import { ComponentFixture, TestBed } from '@angular/cor..."
+- File: sprintplannerdashboard.client\src\app\app.ts
+  Symbols: [WeatherForecast]
+  Preview: "import { HttpClient } from '@angular/common/http'; import { Component, OnInit, signal } from '@angular/core'; interface WeatherForecast {  date: strin..."

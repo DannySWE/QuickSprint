@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="SprintPlannerDashboard.Application/SprintPlannerDashboard.Application.csproj" />
+  <Project Path="sprintplannerdashboard.client/sprintplannerdashboard.client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="SprintPlannerDashboard.Domain/SprintPlannerDashboard.Domain.csproj" />
+  <Project Path="SprintPlannerDashboard.Server/SprintPlannerDashboard.Server.csproj" />
+</Solution>

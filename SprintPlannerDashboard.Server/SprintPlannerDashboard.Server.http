@@ -1,0 +1,263 @@
+@SprintPlannerDashboard.Server_HostAddress = http://localhost:5091
+@SprintPlannerDashboard.Server_HostAddress_https = https://localhost:7127
+@projectPublicId = PROJ-7549ccfe67ec453d8c9766f703c323f0
+@projectBoardPublicId = PROJBOARD-0168e2343f18463583aa03013cb847fc
+@sprintPublicId = SPR-90d40a2857954211a69331710bda8833
+@backlogItemPublicId = BACKLOG-3b425c0e7b394ea78e14887bc8523d1e
+@projectTaskId = 9fca4143-e0c2-46ba-148a-08df1ee32252
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiJlMWQ0YTk2ZC1mMzRkLTRiNjQtOTRmMi0yNGJjNTFhMGY5NDIiLCJDb3VudHJ5IjoiQW1lcmljYSIsInJvbGUiOiJVc2VyIiwibmJmIjoxNzkwODA2MTM5LCJleHAiOjE3OTA4MDY3MzksImlhdCI6MTc5MDgwNjEzOSwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzEyNyIsImF1ZCI6InNwcmludC1wbGFubmVyLWFwaSJ9.EUuYrvXrR7xypDN9Eb-G5isqYQ8Fo8Q17HUL3TExxGU
+
+////////////////////////////////
+//                            //
+//    Project related Calls   //
+//                            //
+////////////////////////////////
+//Create a project
+POST {{SprintPlannerDashboard.Server_HostAddress_https}}/api/projects
+Authorization: Bearer {{token}}
+Content-Type: application/json
+{
+  "name":"test project with mapper"
+}
+###
+
+//Get all projects
+GET {{SprintPlannerDashboard.Server_HostAddress_https}}/api/projects
+Authorization: Bearer {{token}}
+Accept: application/json
+###
+
+//Get project by publicId
+GET {{SprintPlannerDashboard.Server_HostAddress_https}}/api/projects/{{projectPublicId}}
+Authorization: Bearer {{token}}
+Accept: application/json
+###
+
+//Update project
+PATCH {{SprintPlannerDashboard.Server_HostAddress_https}}/api/projects/{{projectPublicId}}
+Authorization: Bearer {{token}}
+Content-Type: application/json
+{
+  "name":"updated project via patch",
+}
+
+###
+//Delete project
+DELETE {{SprintPlannerDashboard.Server_HostAddress_https}}/api/projects/{{projectPublicId}}
+Authorization: Bearer {{token}}
+Accept: application/json
+###
+////////////////////////////////
+//                            //
+// Projectboard related Calls //
+//                            //
+////////////////////////////////
+//Create a project board
+POST {{SprintPlannerDashboard.Server_HostAddress_https}}/api/projects/{{projectPublicId}}/projectboards
+Authorization: Bearer {{token}}
+Content-Type: application/json
+{
+  "name":"test project board",
+  "columns": [],
+}
+###
+//Get all project boards
+GET {{SprintPlannerDashboard.Server_HostAddress_https}}/api/projectboards
+Authorization: Bearer {{token}}
+Accept: application/json
+###
+//Get all project boards from project
+GET {{SprintPlannerDashboard.Server_HostAddress_https}}/api/projects/{{projectPublicId}}/projectboards
+Authorization: Bearer {{token}}
+Accept: application/json
+###
+//Get project board
+GET {{SprintPlannerDashboard.Server_HostAddress_https}}/api/projectboards/{{projectBoardPublicId}}
+Authorization: Bearer {{token}}
+Accept: application/json
+
+###
+//Update a project board
+PATCH {{SprintPlannerDashboard.Server_HostAddress_https}}/api/projects/{{projectPublicId}}/projectboards/{{projectBoardPublicId}}
+Authorization: Bearer {{token}}
+Content-Type: application/json
+{
+  "name":"test project board update",
+  "columns": [],
+}
+###
+////////////////////////////////
+//                            //
+//    Sprint related Calls    //
+//                            //
+////////////////////////////////
+
+//Create Sprint
+POST {{SprintPlannerDashboard.Server_HostAddress_https}}/api/projectboards/{{projectBoardPublicId}}/sprints
+Authorization: Bearer {{token}}
+Content-Type: application/json
+{
+  "name":"test sprint",
+  "goal":"to add authrization",
+  "status": 0,
+  "startdate": "2026-09-25",
+  "enddate": "2026-10-25",
+  "capacitystorypoints": 10,
+  "committedstorypoints": 0,
+  "completedstorypoints": 0
+}
+###
+//Get all sprints
+GET {{SprintPlannerDashboard.Server_HostAddress_https}}/api/sprints
+Authorization: Bearer {{token}}
+Accept: application/json
+###
+//Get a sprint
+GET {{SprintPlannerDashboard.Server_HostAddress_https}}/api/sprints/{{sprintPublicId}}
+Authorization: Bearer {{token}}
+Accept: application/json
+###
+//Update Sprint
+PATCH {{SprintPlannerDashboard.Server_HostAddress_https}}/api/sprints/{{sprintPublicId}}
+Authorization: Bearer {{token}}
+Content-Type: application/json
+{
+  "name":"test sprint update",
+  "goal":"to add authrization",
+  "status": 0,
+  "startdate": "2026-09-25",
+  "enddate": "2026-10-25",
+  "capacitystorypoints": 10,
+  "committedstorypoints": 0,
+  "completedstorypoints": 0
+}
+###
+//Delete sprint
+DELETE {{SprintPlannerDashboard.Server_HostAddress_https}}/api/sprints/{{sprintPublicId}}
+Authorization: Bearer {{token}}
+Accept: application/json
+###
+//Get a sprints backlog
+GET {{SprintPlannerDashboard.Server_HostAddress_https}}/api/sprints/{{sprintPublicId}}/backlog
+Authorization: Bearer {{token}}
+Accept: application/json
+###
+////////////////////////////////
+//                            //
+//    Backlog related Calls   //
+//                            //
+////////////////////////////////
+
+//Create backlog
+POST {{SprintPlannerDashboard.Server_HostAddress_https}}/api/sprints/{{sprintPublicId}}/backlogitems
+Authorization: Bearer {{token}}
+Content-Type: application/json
+{
+  "title": "test backlog",
+  "description": "test",
+  "storypoints": 4
+}
+###
+//Get all backlogs
+GET {{SprintPlannerDashboard.Server_HostAddress_https}}/api/backlogitems
+Authorization: Bearer {{token}}
+Accept: application/json
+###
+//Get a backlog
+GET {{SprintPlannerDashboard.Server_HostAddress_https}}/api/backlogitems/{{backlogItemPublicId}}
+Authorization: Bearer {{token}}
+Accept: application/json
+###
+//Update backlog
+PATCH {{SprintPlannerDashboard.Server_HostAddress_https}}/api/backlogitems/{{backlogItemPublicId}}
+Authorization: Bearer {{token}}
+Content-Type: application/json
+{
+  "title": "test backlog update",
+  "description": "test",
+  "storypoints": 4
+}
+###
+//Delete backlog
+DELETE {{SprintPlannerDashboard.Server_HostAddress_https}}/api/backlogitems/{{backlogItemPublicId}}
+Authorization: Bearer {{token}}
+Accept: application/json
+###
+////////////////////////////////
+//                            //
+//      Task related Calls    //
+//                            //
+////////////////////////////////
+//Create task
+POST {{SprintPlannerDashboard.Server_HostAddress_https}}/api/backlogitems/{{backlogItemPublicId}}/tasks
+Authorization: Bearer {{token}}
+Content-Type: application/json
+{
+  "title": "test task",
+  "inprogress": false,
+  "complete": false,
+  "estimatedhoursforcompletion": 2.5,
+  "completionpercentage": 0
+}
+###
+//Get all tasks
+GET {{SprintPlannerDashboard.Server_HostAddress_https}}/api/tasks
+Authorization: Bearer {{token}}
+Accept: application/json
+###
+//Get a task
+GET {{SprintPlannerDashboard.Server_HostAddress_https}}/api/tasks/{{projectTaskId}}
+Authorization: Bearer {{token}}
+Accept: application/json
+###
+//Update task
+PATCH {{SprintPlannerDashboard.Server_HostAddress_https}}/api/tasks/{{projectTaskId}}
+Authorization: Bearer {{token}}
+Content-Type: application/json
+{
+  "title": "test task update",
+  "inprogress": false,
+  "complete": false,
+  "estimatedhoursforcompletion": 2.5,
+  "completionpercentage": 0
+}
+###
+//Delete task
+DELETE {{SprintPlannerDashboard.Server_HostAddress_https}}/api/tasks/{{projectTaskId}}
+Authorization: Bearer {{token}}
+Accept: application/json
+###
+////////////////////////////////
+//                            //
+//  User/Auth related Calls   //
+//                            //
+////////////////////////////////
+//Register user
+POST {{SprintPlannerDashboard.Server_HostAddress_https}}/api/register
+Content-Type: application/json
+{
+  "email": "test@test.com",
+  "password": "Password123$"
+}
+###
+//Delete user
+DELETE {{SprintPlannerDashboard.Server_HostAddress_https}}/api/delete
+Content-Type: application/json
+{
+  "email": "test@test.com",
+  "password": "Password123$"
+}
+###
+//Login user
+POST {{SprintPlannerDashboard.Server_HostAddress_https}}/api/login
+Content-Type: application/json
+{
+  "email": "test@test.com",
+  "password": "Password123$"
+}
+###
+//Get User
+GET {{SprintPlannerDashboard.Server_HostAddress_https}}/api/userprofile
+Authorization: Bearer {{token}}
+Accept: application/json
+
